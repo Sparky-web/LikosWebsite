@@ -1,0 +1,75 @@
+.Navbar {
+  background-color: black;
+  color: white;
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  ul {
+    margin: 0;
+    display: flex;
+    list-style: none;
+    a {
+      text-decoration: none;
+    }
+    li {
+      transition: 0.2s ease-in;
+      border-bottom: 1px solid transparent;
+      &:hover {
+        border-bottom-color: #FBFF24;
+      }
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+  }
+  .phone {
+    color: white;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 1140px) {
+    padding: 1.5rem 1rem;
+    img.toggler {
+      display: block;
+      margin: 1.5rem 1.5rem 1.5rem auto;
+    }
+    .collapse {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      color: white;
+      text-align: center;
+      transition: 0.2s ease-in;
+
+      ul {
+        padding: 0;
+        margin: 0;
+        li {
+          padding: 0.5rem;
+        }
+        display: block;
+      }
+      .phone {
+        margin-top: 1rem;
+        display: block;
+      }
+    }
+  }
+  @media (min-width: 1140px) {
+    .toggler {display: none}
+    .collapse {
+      display: contents !important;
+    }
+  }
+}
+

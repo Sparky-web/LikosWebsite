@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
+.Navbar {
+  background-color: black;
+  color: white;
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Navbar .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.Navbar ul {
+  margin: 0;
+  display: flex;
+  list-style: none;
+}
+.Navbar ul a {
+  text-decoration: none;
+}
+.Navbar ul li {
+  transition: 0.2s ease-in;
+  border-bottom: 1px solid transparent;
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+.Navbar ul li:hover {
+  border-bottom-color: #FBFF24;
+}
+.Navbar .phone {
+  color: white;
+  text-decoration: underline;
+}
+@media (max-width: 1140px) {
+  .Navbar {
+    padding: 1.5rem 1rem;
+  }
+  .Navbar img.toggler {
+    display: block;
+    margin: 1.5rem 1.5rem 1.5rem auto;
+  }
+  .Navbar .collapse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    transition: 0.2s ease-in;
+  }
+  .Navbar .collapse ul {
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+  .Navbar .collapse ul li {
+    padding: 0.5rem;
+  }
+  .Navbar .collapse .phone {
+    margin-top: 1rem;
+    display: block;
+  }
+}
+@media (min-width: 1140px) {
+  .Navbar .toggler {
+    display: none;
+  }
+  .Navbar .collapse {
+    display: contents !important;
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px !important;
+}
+@media (max-width: 760px) {
+  :root {
+    font-size: 14px !important;
+  }
+}
+
+.Main > section {
+  padding: 3rem;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */
