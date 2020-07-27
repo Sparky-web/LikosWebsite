@@ -1,0 +1,15 @@
+.AboutUs {
+  .text {
+    padding: 5rem 0;
+    max-width: 500px;
+  }
+  background: url("../img/AboutUs.jpg") center;
+  background-size: cover;
+
+  @media (max-width: 760px) {
+  .text {
+    padding: 3rem 0;
+    max-width: 100%;
+    }
+  }
+}

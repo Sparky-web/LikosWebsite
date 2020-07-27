@@ -8,12 +8,14 @@ import Navbar from "./Components/Navbar"
 import Guarantees from "./Components/Guarantees"
 import Headline from "./Components/Headline"
 import Schema from "./Components/Schema"
+import AboutUs from "./Components/AboutUs"
 
 function App(props) {
     return (
         <div className="App">
             <Navbar/>
             <Headline />
+            <AboutUs />
             <Guarantees />
             <Works />
             <Reviews />
