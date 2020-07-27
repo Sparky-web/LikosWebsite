@@ -18,8 +18,8 @@ function App(props) {
             <AboutUs />
             <Guarantees />
             <Works />
-            <Reviews />
             <Schema />
+            <Reviews />
             <ContactUs />
             <Footer />
         </div>
