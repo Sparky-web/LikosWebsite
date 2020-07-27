@@ -49,6 +49,61 @@
   }
 }
 
+.Works {
+  position: relative;
+}
+.Works .wrap {
+  padding: 1rem;
+  outline: none;
+}
+.Works .card {
+  position: relative;
+  display: grid;
+  height: 500px;
+  background: center;
+  background-size: cover;
+}
+.Works .card .img-wrap {
+  z-index: -999;
+  height: 500px;
+}
+.Works .card img {
+  height: 100%;
+  width: 100%;
+  object-position: bottom;
+  object-fit: cover;
+}
+.Works .bottom {
+  position: absolute;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: #2E2E2E;
+  color: white;
+  padding: 1rem 2rem;
+  bottom: 0;
+}
+.Works .bottom h3 {
+  margin: 1rem 0;
+}
+@media (max-width: 760px) {
+  .Works .bottom {
+    display: block;
+    text-align: center;
+  }
+}
+
+.slick-arrow:before {
+  content: none !important;
+}
+@media (max-width: 760px) {
+  .slick-arrow {
+    display: none !important;
+  }
+}
+
 .Navbar {
   background-color: black;
   color: white;
