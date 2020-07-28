@@ -9,6 +9,7 @@ import Guarantees from "./Components/Guarantees"
 import Headline from "./Components/Headline"
 import Schema from "./Components/Schema"
 import AboutUs from "./Components/AboutUs"
+import Services from "./Components/Services"
 
 function App(props) {
     return (
@@ -18,6 +19,7 @@ function App(props) {
             <AboutUs />
             <Guarantees />
             <Works />
+            <Services />
             <Schema />
             <Reviews />
             <ContactUs />
