@@ -13,13 +13,13 @@ function Navbar(props) {
             <div className="collapse" style={{opacity: isToggled ? "1" : "0"}}>
                 <img className="toggler" onClick={toggle} src="https://img.icons8.com/ios-glyphs/30/FFFFFF/multiply.png"/>
                 <ul>
-                    <a href=""><li>Оставить заявку</li></a>
-                    <a href=""><li>Работы</li></a>
-                    <a href=""><li>Отзывы</li></a>
-                    <a href=""><li>Контакты</li></a>
-                    <a href=""><li>Услуги</li></a>
+                    <a href="#contactUs"><li>Оставить заявку</li></a>
+                    <a href="#works"><li>Работы</li></a>
+                    <a href="#guarantees"><li>Гарантии</li></a>
+                    <a href="#contacts"><li>Контакты</li></a>
+                    <a href="#services"><li>Услуги</li></a>
                 </ul>
-                <a href="tel:+73432342322" className="phone">+7 (343) 234 23 22</a>
+                <a href="tel:+73432675196" className="phone">+7 (343) 267 51 96</a>
             </div>
         </nav>
     );

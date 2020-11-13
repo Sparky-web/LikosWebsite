@@ -21,7 +21,6 @@ function App(props) {
             <Works />
             <Services />
             <Schema />
-            <Reviews />
             <ContactUs />
             <Footer />
         </div>

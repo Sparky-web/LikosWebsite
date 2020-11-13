@@ -8,17 +8,17 @@
   .card {
     position: relative;
     display: grid;
-    height: 500px;
+    height: 700px;
     background: center;
     background-size: cover;
     .img-wrap {
       z-index: -999;
-      height: 500px;
+      height: 600px;
     }
     img {
       height: 100%;
       width: 100%;
-      object-position: bottom;
+      object-position: center;
       object-fit: cover;
     }
   }

@@ -25,7 +25,7 @@ function WorkingScheme(props) {
     ])
 
     return (
-        <section className="Schema" id="working">
+        <section className="Schema" id="schema">
             <h2>Схема работы</h2>
             <div className="container">
                 <div className="timeline">
@@ -37,7 +37,7 @@ function WorkingScheme(props) {
                     ))}
                 </div>
             </div>
-            <a href="#order" className="btn">Оставить заявку</a>
+            <a href="#contactUs" className="btn">Оставить заявку</a>
         </section>
     );
 }

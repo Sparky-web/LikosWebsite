@@ -1,8 +1,14 @@
 import React from 'react';
+import firebase from "firebase"
+import "firebase/functions"
 
 function Order(props) {
+    const onSend = (event) => {
+
+    }
+
     return (
-        <section className="ContactUs" id="ContactUs">
+        <section className="ContactUs" id="contactUs">
             <div className="container">
                 <h2>Оставить заявку</h2>
                 <div className="wrap">
@@ -22,7 +28,7 @@ function Order(props) {
                                 <input type="checkbox" name="" id=""/>
                                 <p>Принимаю соглашение на обработку персональных данных</p>
                             </div>
-                            <a href=""><button>Заказать рекламу</button></a>
+                            <a href=""><button>Оставить заявку</button></a>
                         </form>
                     </div>
                 </div>

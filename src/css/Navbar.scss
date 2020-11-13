@@ -20,6 +20,7 @@
     }
     li {
       transition: 0.2s ease-in;
+      padding-bottom: 0.2rem;
       border-bottom: 1px solid transparent;
       &:hover {
         border-bottom-color: #FBFF24;

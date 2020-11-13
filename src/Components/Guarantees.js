@@ -30,7 +30,7 @@ function Guarantees(props) {
     })
 
     return (
-        <section className="Guarantees">
+        <section className="Guarantees" id="guarantees">
             <div className="container">
                 <h2>Гарантии</h2>
                 <div className="wrap">

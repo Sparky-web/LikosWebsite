@@ -40,23 +40,23 @@ function Works(props) {
 
     const data = [
         {
-            name: "Шкаф с АВР",
+            name: "ВРУ",
             date: "19.09.19",
-            img: "image 1.jpg"
+            img: "ВРУ.jpg"
+        },
+        {
+            name: "Шкаф управления компрессором",
+            date: "09.01.20",
+            img: "упр.компрессором.jpg"
+        },
+        {
+            name: "Шкаф управления вентеляцией",
+            date: "02.12.19",
+            img: "Вентеляция.jpg"
         },
         {
             name: "Шкаф с АВР",
-            date: "19.09.19",
-            img: "image 1.jpg"
-        },
-        {
-            name: "Шкаф с АВР",
-            date: "19.09.19",
-            img: "image 1.jpg"
-        },
-        {
-            name: "Шкаф с АВР",
-            date: "19.09.19",
+            date: "06.07.20",
             img: "image 1.jpg"
         }
     ]
@@ -71,13 +71,13 @@ function Works(props) {
                         <h3>{el.name}</h3>
                         <p>Сделанно: {el.date}</p>
                     </div>
-                    <a href=""><button>Оставить заявку</button></a>
+                    <a href="#contactUs"><button>Оставить заявку</button></a>
                 </div>
             </div>
         </div>
     ))
     return (
-        <section className="Works">
+        <section className="Works" id="works">
             <div className="container">
                 <h2>Наши работы</h2>
                 <Slider {...settings}>
