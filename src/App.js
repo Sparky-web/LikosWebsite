@@ -2,7 +2,6 @@ import React from 'react';
 import "./css/App.css"
 import Footer from "./Components/Footer"
 import ContactUs from "./Components/ContactUs"
-import Reviews from "./Components/Reviews"
 import Works from "./Components/Works"
 import Navbar from "./Components/Navbar"
 import Guarantees from "./Components/Guarantees"
