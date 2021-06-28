@@ -1,0 +1,63 @@
+.Works {
+  background: #EEEEEE;
+  position: relative;
+
+  .wrap {
+    padding: 1rem;
+    outline: none;
+  }
+
+  .card {
+    position: relative;
+    display: grid;
+    height: 700px;
+    background: center;
+    background-size: cover;
+
+    .img-wrap {
+      z-index: -999;
+      height: 600px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-position: center;
+      object-fit: cover;
+    }
+  }
+
+  .bottom {
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: #2E2E2E;
+    color: white;
+    padding: 1rem 2rem;
+    bottom: 0;
+
+    h3 {
+      margin: 1rem 0;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .bottom {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+.slick-arrow {
+  &:before {
+    content: none !important;
+  }
+
+  @media (max-width: 760px) {
+    display: none !important;
+  }
+}

@@ -1,0 +1,72 @@
+.Reviews {
+  position: relative;
+  background: #EEEEEE;
+
+  .slick-dots {
+    padding: 0 !important;
+  }
+
+  .slick-dots li button:before {
+    width: 30px !important;
+    height: 3px !important;
+    content: '';
+    background: #000000;
+  }
+
+  .slick-dots li {
+    width: auto;
+  }
+
+  padding: 4rem 0;
+  @media (min-width: 760px) {
+    .slick-next {
+      display: block;
+      height: 3rem;
+      width: 3rem;
+      right: -4rem;
+    }
+    .slick-prev {
+      display: block;
+      height: 3rem;
+      width: 3rem;
+      left: -4rem;
+    }
+  }
+  @media (max-width: 760px) {
+    .slick-next {
+      display: none !important;
+    }
+    .slick-prev {
+      display: none !important;
+    }
+  }
+
+  .review-wrap {
+    display: flex !important;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+
+  .review {
+    border-radius: 15px;
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 36rem;
+    height: 20rem;
+    max-width: 100%;
+
+    h5 {
+      font-size: 1.5rem;
+      font-weight: 500
+    }
+
+    p {
+      font-size: 1rem
+    }
+
+    @media (max-width: 760px) {
+      height: 30rem;
+    }
+  }
+}

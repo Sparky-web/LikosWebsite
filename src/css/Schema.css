@@ -1,0 +1,141 @@
+.WorkingScheme {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: url("./img/working-bg.jpg") center;
+    background-size: cover;
+    color: white;
+}
+
+.WorkingScheme .btn {
+    z-index: 1;
+    margin: 2rem auto;
+    color: white;
+}
+
+.WorkingScheme .container {
+    max-width: 900px;
+}
+
+.WorkingScheme h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: white;
+}
+
+@media (max-width: 968px) {
+    .WorkingScheme .container {
+        max-width: 70%;
+        padding: 0;
+        margin: 0 2rem 0 auto;
+    }
+
+    .WorkingScheme .timeline--entry:before {
+        margin-left: 8px;
+    }
+}
+
+/* - &:nth-child(1) {
+			 grid-area: entry1;
+		 }
+   - useful timesaver if there is a lengthy list
+*/
+.timeline {
+    line-height: 1.5em;
+    font-size: 1rem;
+    transition: all 0.4s ease;
+    position: relative;
+    counter-reset: section;
+}
+
+.timeline:before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background: #FFF500;
+    position: absolute;
+    top: 0;
+    left: -3.313em;
+    border-radius: 40px 40px;
+}
+
+.timeline--entry {
+    color: white;
+    position: relative;
+}
+
+.timeline--entry__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    padding: 1rem;
+}
+
+.timeline--entry__detail {
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    margin: 0;
+}
+
+.timeline--entry:before {
+    content: "";
+    color: white;
+    width: 20px;
+    height: 20px;
+    margin-left: 1.91rem;
+    margin-top: 1rem;
+    background-color: #FFF500;
+    position: absolute;
+    left: -4.5em;
+    box-shadow: 0px 0px 4px #FFF500;
+    transform: rotate(-45deg);
+}
+
+@media (min-width: 968px) {
+    .timeline {
+        display: grid;
+        grid-gap: 4.75em;
+        grid-row-gap: 1em;
+        grid-template-areas: ".  entry1" "entry2  ." ". entry3" "entry4 ." ". entry5";
+    }
+
+    .timeline:before {
+        left: 49.5%;
+    }
+
+    .timeline--entry:nth-child(1) {
+        grid-area: entry1;
+    }
+
+    .timeline--entry:nth-child(2) {
+        grid-area: entry2;
+    }
+
+    .timeline--entry:nth-child(3) {
+        grid-area: entry3;
+    }
+
+    .timeline--entry:nth-child(4) {
+        grid-area: entry4;
+    }
+
+    .timeline--entry:nth-child(5) {
+        grid-area: entry5;
+    }
+
+    .timeline--entry:nth-of-type(odd):before {
+        left: -4.2em;
+    }
+
+    .timeline--entry:nth-of-type(even):not(:nth-of-type(odd)) .timeline--entry__title:before {
+        left: 100%;
+        border-left: 10px solid pink;
+        border-right: 0;
+    }
+
+    .timeline--entry:nth-of-type(even):before {
+        left: 102%;
+    }
+}
+
+/*# sourceMappingURL=Schema.css.map */

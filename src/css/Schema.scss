@@ -1,0 +1,176 @@
+//-Timeline Specific Mixins
+.Schema {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .btn {
+    z-index: 1;
+    margin: 2rem auto;
+    color: white;
+  }
+
+  background: #2E2E2E center;
+  background-size: cover;
+
+  .container {
+    max-width: 900px;
+  }
+
+  color: white;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: white;
+  }
+
+  @media (max-width: 968px) {
+    .container {
+      max-width: 70%;
+      padding: 0;
+      margin: 0 2rem 0 auto;
+    }
+    .timeline--entry:before {
+      margin-left: 8px;
+    }
+  }
+}
+
+//- Indicator style
+@mixin tablet-up {
+}
+
+@mixin timeline-indicator {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+// - Timeline entry
+// - Produces the following:
+/* - &:nth-child(1) {
+			 grid-area: entry1;
+		 }
+   - useful timesaver if there is a lengthy list
+*/
+@mixin timeline-entry {
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      grid-area: entry#{$i};
+    }
+  }
+}
+
+//- Variables
+$timeline-indicator-color: #FFF500;
+$timeline-indicator-border: 1px solid gondola;
+$timeline-title-background-color: dark-pink;
+
+
+//- Mobile First Timeline - stacked for small viewports and browsers that don't support grid
+.timeline {
+  line-height: 1.5em;
+  font-size: 1rem;
+  transition: all .4s ease;
+  position: relative;
+  counter-reset: section;
+
+  //- indicator line
+  &:before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background: $timeline-indicator-color;
+    position: absolute;
+    top: 0;
+    left: -3.313em;
+    border-radius: 40px 40px;
+  }
+}
+
+.timeline--entry {
+  color: white;
+  position: relative;
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    padding: 1rem;
+  }
+
+  &__detail {
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    margin: 0;
+  }
+
+  //- number indicator
+  &:before {
+    content: "";
+    color: white;
+    width: 20px;
+    height: 20px;
+    margin-left: 1.91rem;
+    margin-top: 1rem;
+    background-color: #FFF500;
+    position: absolute;
+    left: -4.5em;
+    box-shadow: 0px 0px 4px #FFF500;
+    transform: rotate(-45deg);
+  }
+}
+
+
+//- Tablet Up Screens Layout if CSS Grid is supported
+@media (min-width: 968px) {
+  .timeline {
+    display: grid;
+    grid-gap: 4.75em;
+    grid-row-gap: 1em;
+    grid-template-areas: 	".  entry1"
+														"entry2  ."
+														". entry3"
+														"entry4 ."
+														". entry5";
+    //- Timeline line
+    &:before {
+      left: 49.5%;
+    }
+  }
+  .timeline--entry {
+    @include timeline-entry;
+
+    //- odd timeline entry
+    &:nth-of-type(odd) {
+      //- Default position the number indicator mobile
+      &:before {
+        left: -5.3em;
+      }
+    }
+
+    //- even timeline entry
+    &:nth-of-type(even) {
+      &:not(:nth-of-type(odd)) {
+        //-right pointing arrow indicator
+        .timeline--entry__title {
+          &:before {
+            left: 100%;
+            border-left: 10px solid pink;
+            border-right: 0;
+          }
+        }
+      }
+
+      //- Position the number indicator
+      &:before {
+        left: 98%;
+      }
+    }
+  }
+}
